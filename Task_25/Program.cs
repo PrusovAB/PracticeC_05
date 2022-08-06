@@ -1,4 +1,8 @@
-﻿int[] CreateArrayRndInd (int size, int min, int max)
+﻿// Метот CreateArrayRndInd создает случайный массив цифр, 
+// которые указал пользователь,
+// размер массива, максимальное и минимальное значения чисел массива.
+
+int[] CreateArrayRndInd (int size, int min, int max)
 {
 	int[] arr = new int[size];
 	Random rnd = new Random();
@@ -10,6 +14,9 @@
 
 	return arr;
 }
+
+// Метот PrintArray выводит на экран созданый случайный массив
+
 void PrintArray(int[] array)
 {
 	for (int i = 0; i < array.Length; i++)
@@ -19,6 +26,8 @@ void PrintArray(int[] array)
 		else Console.Write(array[i] + "]");
 	}
 }
+
+// Метод ShowSumPos показывает колличество положительных чисел в массиве
 
 
 void ShowSumPos (int[] array)
@@ -34,10 +43,11 @@ void ShowSumPos (int[] array)
 	Console.WriteLine($"В данном массиве количество четных чисел = {sum} ");
 }
 
-int[] array = CreateArrayRndInd(20,100,999);
-PrintArray(array);
-Console.WriteLine();
-ShowSumPos(array);
+// Вызов методов.
+int[] array = CreateArrayRndInd(20,100,999); // Задаем массив из 20 элементов,числа рандомные трехзначные
+PrintArray(array); 
+Console.WriteLine(); 
+ShowSumPos(array); 
 
 
 
